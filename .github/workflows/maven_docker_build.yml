@@ -10,8 +10,7 @@ jobs:
     name: Build & push docker image
     runs-on: ubuntu-latest
     env:
-      # [Temporary solution] - Points to my personal (CAPG) docker repo - TODO create a org repo for codeai
-      IMG_NAME: josemiguelcamachotavares587/dockerworkflow
+      IMG_NAME: ${{ env.IMAGE_NAME}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
