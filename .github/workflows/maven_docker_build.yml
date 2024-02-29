@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # [Temporary solution] - Points to my personal (CAPG) docker repo - TODO create a org repo for codeai
-      IMG_NAME: josemiguelcamachotavares587/rtmccodeai
+      IMG_NAME: josemiguelcamachotavares587/dockerworkflow
     steps:
       - name: Checkout
         uses: actions/checkout@v3
