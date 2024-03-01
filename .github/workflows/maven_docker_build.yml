@@ -40,6 +40,8 @@ jobs:
 
       - name: Run app
         run: |
+          export MY_ENV_VAR=$(find ./ -maxdepth 1 -type d -name 'apache-maven-*' | head -n 1)
+          echo MY_ENV_VAR as value: $MY_ENV_VAR
           export MAVEN_HOME=$(find /usr/share -maxdepth 1 -type d -name 'apache-maven-*' | head -n 1)
           java -jar ./target/com.dummy.examples-1.0-SNAPSHOT.jar
 
