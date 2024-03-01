@@ -39,7 +39,9 @@ jobs:
         run: mvn clean package
 
       - name: Run app
-        run: java -jar ./target/com.dummy.examples-1.0-SNAPSHOT.jar
+        run: |
+          export MAVEN_HOME=/usr/share/apache-maven-3.8.8
+          java -jar ./target/com.dummy.examples-1.0-SNAPSHOT.jar
 
       # Defines tags to be applied to the image, depending on the tag definitions, see: https://github.com/docker/metadata-action
       - name: Docker metadata
