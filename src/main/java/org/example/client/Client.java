@@ -10,6 +10,7 @@ public class Client {
     public static void main(String[] args) {
         evaluate("onino");
         evaluate("Txuba");
+        System.out.println("MAVEN HOME IS DEFINED AS: " + System.getenv("MAVEN_HOME") );
     }
 
     private static void evaluate(String input) {
