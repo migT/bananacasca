@@ -40,9 +40,7 @@ jobs:
 
       - name: Run app
         run: |
-          export MY_ENV_VAR=$(find /usr/share -maxdepth 1 -type d -name 'apache-maven-*' | head -n 1)
-          echo MY_ENV_VAR as value: $MY_ENV_VAR
-          export MAVEN_HOME=/usr/share/apache-maven-3.8.8
+          export MAVEN_HOME=$(find /usr/share -maxdepth 1 -type d -name 'apache-maven-*' | head -n 1)
           java -jar ./target/com.dummy.examples-1.0-SNAPSHOT.jar
 
       # Defines tags to be applied to the image, depending on the tag definitions, see: https://github.com/docker/metadata-action
