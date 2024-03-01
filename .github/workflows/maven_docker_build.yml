@@ -27,8 +27,7 @@ jobs:
 
       - name: Print Maven version
         run: |
-          mvn --version
-          echo MAVEN_HOME $MAVEN_HOME
+          printenv
 
       - name: Build with Maven
         run: mvn clean package -DskipTests
