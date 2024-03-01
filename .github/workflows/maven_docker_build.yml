@@ -26,7 +26,9 @@ jobs:
           java-version: '21'
 
       - name: Print Maven version
-        run: mvn --version
+        run: |
+          mvn --version
+          echo $MAVEN_HOME
 
       - name: Build with Maven
         run: mvn clean package -DskipTests
